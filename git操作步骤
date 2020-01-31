@@ -1,0 +1,60 @@
+下载安装 git
+
+1.查看版本信息  
+    git --version
+2.创建全局账户和邮箱
+    git config --global user.name 'zff'
+    git config --global user.email 'zhufeifanweb@163.com'
+3.初始化文件目录（哪个文件使用就进入哪个文件）
+    cd 进入文件目录  git init 初始化
+    会生成隐藏文件： .git目录------》局部目录
+    config  配置文件
+        配置其他用户
+        [user]
+	        name = zff_qq
+	        email = 845465589@qq.com
+二、使用：
+    1.编写文件  原理：先储存在本地仓库，提交后在提交到统一服务器
+    2.提交到外网 GitHub上
+
+    右键打开 Git Base Here 命令窗口
+
+    A@DESKTOP-VHT40HM MINGW64 /d/myProject (master) 在主分支的意思
+
+    执行命令：
+        1. git status 查看可提交的全部文件的状态
+        2. git add 文件名称   -------》 把文件发送到等待区
+        3. git commit -m "备注：zff提交的文件" 存到了本地仓库
+        4.修改文件后
+            重新执行  2、3步骤
+            git add 文件名  git commit -m "备注信息"
+            （下班提交代码执行： git commit -m "备注"）
+        git log                  查看提交日志
+        git show 版本号           查看此版本提交的文件
+        git checkout 文件名称     检出文件
+        rm 文件名称               删除文件  只是删除本地的文件，仓库内文件未删除
+        git rm 文件名称           删除等待区域的文件
+
+        git branch              查看所属分支
+        git branch  分支名       创建分支名
+        git checkout 分支名      检出分支
+        
+        master 主干
+
+        合并分支  必须保持在 主干 时  才能合并
+        git merge 分支名称  
+        git branch -d 分支名称   删除分支
+
+三、 git 与 GitHub
+    在 GitHub 上创建项目  并查看链接  https://github.com/HTMLzf/ceshi.git
+    推送到远程服务器上
+    git remote add origin https://github.com/HTMLzf/ceshi.git
+    git push -u origin master
+
+    下载到本地
+    git clone https://github.com/HTMLzf/ceshi.git
+
+
+
+
+
